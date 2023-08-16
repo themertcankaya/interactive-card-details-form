@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.container {
+  display: flex;
+  /* align-items: center; */
+}
+.left {
+  height: 100vh;
+  flex: 3.2;
+}
+.left img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.right {
+  flex: 6.8;
+  display: grid;
+  place-items: center;
+}
+form {
+  /* border: 1px solid red; */
+  padding: 0.5rem;
+z-index: 2;
+}
+.form-control {
+  margin-bottom: 1rem;
+  /* border: 2px solid black; */
+  
+}
+.form-control div {
+  width: 100%;
+}
+.form-control:nth-of-type(1),.form-control:nth-of-type(2) {
+  /* background-color: aqua; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+label {
+  display: block;
+}
+input {
+  padding: 5px;
+}
+
+
+input[name="name"],input[name="cardNumber"] {
+  /* background-color: pink; */
+  width: 100%;
+  outline: none;
+  border: 1px solid lightgray;
+  height: 2rem;
+}
+
+
+.error {
+  font-size: 0.8rem;
+  color: red;
+}
+
+.inputs {
+  display: flex;
+  gap: 0.5rem;
+}
+
+
+.inputs input {
+  height: 2rem;
+  width: 75px;
+  outline: none;
+  border: 1px solid lightgray;
+
+}
+
+.inputs input[name="cvc"] {
+  width: 150px;
+}
+.i1,.i2,.i3 {
+  font-size: 0.75rem;
+}
+
+
+.l12 {
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+
+form button {
+  width: 100%;
+  height: 2rem;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+input,button {
+  border-radius: 5px;
+}
+
+.deneme {
+  text-transform: uppercase;
+}
+
+.credit {
+  /* border: 2px solid red; */
+  width: 532px;
+  display: grid;
+  gap:2rem;
+  position: absolute;
+  top:125px;
+  left: 100px;
+}
+
+
+.card-front,.card-back {
+  
+  width: 432px;
+  height: 216px;
+  color: #fff;
+  border-radius: 10px;
+}
+
+
+.card-front {
+  background: url(./images/bg-card-front.png) no-repeat;
+  background-size: cover;
+}
+.info-front{
+
+  height: 100%;
+}
+.info-front img {
+  display: block;
+  padding: 0.5rem;
+  padding-left: 2rem;
+  margin-top: 1rem;
+}
+.info-front .card-number {
+  font-size: 2rem;
+  text-align: center;
+  margin-top: 2rem;
+  font-weight: 400;
+}
+.info-front .name-date {
+  display: flex;
+  padding: 0 2rem;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+.card-back {
+  background: url(./images/bg-card-back.png) no-repeat ;
+  justify-self: flex-end;
+  position: relative;
+  background-size: cover;
+}
+.card-back p  {
+ position: absolute; 
+ top: 6.7rem;
+ right: 3rem;
+}
+
+.name-date p {
+  text-transform: uppercase;
+}
+
+.thanks {
+  text-align: center;
+  display: grid;
+  place-items: center;
+  gap: 1rem;
+}
+.thanks h2 {
+  font-weight: 500;
+}
+.thanks p {
+  font-size: 0.9rem;
+}
+.thanks button {
+  width: 316px;
+  background-color: #22092F;
+  color: white;
+  height: 2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+@media screen and (max-width:1250px) {
+  .credit {
+    left: 30px;
+  }  
+  .card-front,.card-back {
+    width: 300px;
+    height: 150px;
+  }
+  .card-back {
+    justify-self: center;
+  }
+  .card-front img {
+    width: 100px;
+  }
+  .card-front .card-number {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+  }
+  .card-front p {
+    font-size: 0.8rem;
+  }
+  .card-front .name-date {
+    margin-top: 0.5rem;
+    padding: 0 1rem;
+  }
+  .card-back p  {
+    top: 4.5rem;
+    right: 2.5rem;
+    font-size: 0.8rem;
+   }
+}
+
+@media screen and (max-width:992px) {
+  .credit {
+    left: 10px;
+    /* border: 2px solid lawngreen; */
+    width: max-content;
+  }  
+  .card-back {
+    justify-self: center !important;
+  }
+}
+
+@media screen and (max-width:768px) {
+  .container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .left img {
+    height: 250px;
+  }
+  .credit {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    justify-content: center;
+  }
+  .card-front {
+    order: 1;
+    position: relative;
+    right: 2rem;
+    bottom: 3.6rem;
+    z-index: 1;
+  }
+  .card-back {
+    position: relative;
+    top: 2rem;
+    left: 2rem;
+  }
+}
