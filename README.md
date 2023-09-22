@@ -33,4 +33,4 @@ Users should be able to:
 - Formik
 - Yup
 
-Challenge by Challenge by [Frontend Mentor](https://www.frontendmentor.io?ref=challenge)
+Challenge by [Frontend Mentor](https://www.frontendmentor.io?ref=challenge)
